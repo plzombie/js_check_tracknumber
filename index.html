@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Проверка трек-номеров почтовых отправлений</title>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="tracknumber.js"></script>
+</head>
+<body>
+	<h1>Проверка трек-номеров почтовых отправлений</h1>
+	<label>Трек-номер<textarea id="tracknum"></textarea></label>
+	<button onclick="update_info()">Проверить</button>
+	<h2 id="tracknum_type"></h2>
+	<p id="mail_info"></p>
+	<p id="country_info"></p>
+	<p id="index"></p>
+	<p id="wrong_checksum" class="hidden_block">Неправильный трек номер (контрольная сумма не совпадает)</p>
+	<p id="correct_checksum" class="hidden_block">Трек номер корректный, используйте <a id="postal_link">ссылку</a> для отслеживания посылки</p>
+</body>
+</html>
