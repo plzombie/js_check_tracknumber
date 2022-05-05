@@ -40,7 +40,7 @@ function update_info()
 		document.getElementById("index").className = "hidden_block";
 	else {
 		document.getElementById("index").className = "";
-		document.getElementById("index").innerHTML = "Индекс отправителя: " + info.mail_info;
+		document.getElementById("index").innerHTML = "Индекс отправителя: " + info.index;
 	}
 		
 	if(info.checksum_correct === true || info.checksum_correct === false) {
