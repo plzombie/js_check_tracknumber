@@ -211,8 +211,6 @@ function check_checksum_ru(tracknum)
 	var calc_control = 10-(sum1+sum2)%10;
 	
 	return control === calc_control;
-	
-	return null;
 }
 
 function tracknum_info(tracknum)

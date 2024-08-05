@@ -11,7 +11,8 @@
 </head>
 <body>
 	<h1>Проверка трек-номеров почтовых отправлений</h1>
-	<label>Трек-номер<textarea id="tracknum"></textarea></label>
+	<label for="tracknum">Трек-номер</label>
+	<textarea id="tracknum" name="tracknum" rows="1" cols="15"></textarea>
 	<button onclick="update_info()">Проверить</button>
 	<h2 id="tracknum_type"></h2>
 	<p id="mail_info"></p>

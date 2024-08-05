@@ -1,4 +1,9 @@
 
+textarea#tracknum {
+    resize: none;
+    vertical-align: bottom;
+}
+
 .hidden_block {
 	display: none;
 }
