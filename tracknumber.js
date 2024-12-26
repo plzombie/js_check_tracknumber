@@ -208,7 +208,7 @@ function check_checksum_ru(tracknum)
 	for(var i = 1; i < 13; i += 2)
 		sum2 += tracknum.charCodeAt(i)-0x30;
 	
-	var calc_control = 10-(sum1+sum2)%10;
+	var calc_control = (10-(sum1+sum2)%10)%10;
 	
 	return control === calc_control;
 }
@@ -231,9 +231,9 @@ function tracknum_info(tracknum)
 		info.mail_info = mail_info(sign);
 		info.country_info = country_info(iso);
 		info.checksum_correct = check_checksum_ww(tracknum);
-	} else if(tracknum.length == 13 && is_num(tracknum) === true) {
+	} else if(tracknum.length === 13 && is_num(tracknum) === true) {
 		info.type = tracknum_int
-	} else if(tracknum.length == 14) {
+	} else if(tracknum.length === 14 && is_num(tracknum) === true) {
 		info.type = tracknum_ru;
 		info.index = tracknum.slice(0, 6);
 		info.checksum_correct = check_checksum_ru(tracknum);
